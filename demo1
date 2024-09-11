@@ -1,0 +1,18 @@
+package com.orlando;
+
+import java.math.BigDecimal;
+
+public class Demo2 {
+    public static void main(String[] args) throws InterruptedException {
+//取木棍，每次长度减半，后面的长度相加永远无法超过第一个
+        BigDecimal f = new BigDecimal("1");
+        BigDecimal e = new BigDecimal("0");
+        BigDecimal g = new BigDecimal("2");
+        while (true){
+            e = e.add(f);
+            System.out.println(e);
+            f = f.divide(g);
+            Thread.sleep(100);
+        }
+    }
+}
